@@ -1,0 +1,8 @@
+{
+    "name": "Robbis' Private PHP Repository",
+    "homepage": "http://satis.robbestad.com",
+    "repositories": [
+        { "type": "vcs", "url": "http://github.com/svenanders/SarDatabases" }
+    ],
+    "require-all": true
+}

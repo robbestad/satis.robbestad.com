@@ -1,0 +1,10 @@
+{
+    "name": "soldotno/sol-satis",
+    "description": "Sol satis config",
+    "license": "Property of Scandinavia Online AS, can not be used without of the expressed written consent of the company",
+    "require": {
+        "php": ">=5.3.3",
+	"composer/satis": "dev-master",
+	"composer/composer": "1.0.*@dev"
+    }
+}
