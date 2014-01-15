@@ -30,7 +30,7 @@ If you want to deploy a new version of this, do:
 
     cd /web/satis.robbestad.com/
     rm -rf master
-    git clone https://github.com/svenanders/satis.robbestad.com master
+    git clone git@github.com:svenanders/satis.robbestad.com.git master
     cd master
     composer.phar install
     sh update.sh
