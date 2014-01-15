@@ -33,7 +33,12 @@ If you want to deploy a new version of this, do:
     git clone https://github.com/svenanders/satis.robbestad.com master
     cd master
     composer.phar install
+    sh update.sh
+    
+or simply run
 
+    sh /web/satis.robbestad.com/update.sh
+    
 
 ####Adding more private github repos to Satis
 
