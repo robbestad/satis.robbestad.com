@@ -1,12 +1,12 @@
-sol-satis
-=========
+#satis.robbestad.com
 
-Sol's satis repo with config. 
 
-This repo is located in [satis|nexus].sol.no under /var/www/satis/master
+This repo is located satis.robbestad.com under /web/satis.robbestad.com/current
 
-the crontab is running the file update.sh each 2 min and is updating the satis repo with the latest changes from github.
+The following line in crontab is executed every 2 minutes, and updates the repo with the lates
+changes from Github
 
+  * * * * * /var/www/satis/current/update.sh > /var/www/satis/current/update.cron.log 2>&1
 
 ####First time installation
 
@@ -21,19 +21,19 @@ To create a fresh satis repo from scratch all you need to do is;
 
 ####Crontab @ root:
 
-    */2 * * * * /var/www/satis/current/update.sh > /var/www/satis/current/update.cron.log 2>&1
+    */2 * * * * /web/satis.robbestad.com/current/update.sh >  /web/satis.robbestad.com/update.cron.log 2>&1
 
 
 ####Deploy:
 
 If you want to deploy a new version of this, do:
 
-    cd /var/www/satis/
+    cd /web/satis.robbestad.com/
     rm -rf master
-    git clone https://github.com/soldotno/sol-satis.git master
+    git clone https://github.com/svenanders/satis.robbestad.com master
+    cd master
     composer.phar install
 
-as root @ satis.sol.no
 
 ####Adding more private github repos to Satis
 
@@ -46,14 +46,14 @@ To use the packages from satis you need to add satis.sol.no as a repo in your co
     "repositories": [
         {
             "type": "composer",
-            "url": "http://satis.sol.no"
+            "url": "http://satis.robbestad.com"
         }
     ],
     
-And then you can just add the packages as if the where on packagist. F.eks:
+And then you can just add the packages as with packagist. Eg:
 
     "require": {
-        "soldotno/sol-logger" : "dev-master"
+        "svenanders/SarDatabases" : "dev-master"
     },
 
 
