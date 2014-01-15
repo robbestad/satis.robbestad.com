@@ -1,2 +1,3 @@
-BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#!/bin/bash
+BASEDIR=$(dirname $0)
 php $BASEDIR/vendor/bin/satis build $BASEDIR/satis.json $BASEDIR/public
